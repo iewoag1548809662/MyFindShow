@@ -21,7 +21,7 @@ public class MainActivity extends BaseActivity<MainPrenter> implements IMyMain.I
 
     @Override
     protected void initDatas() {
-
+        Iprenter.getNews();
     }
 
     @Override
@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity<MainPrenter> implements IMyMain.I
 
     @Override
     protected MainPrenter getPrenter() {
-        return new MainPrenter(this);
+        return new MainPrenter();
     }
 
     @Override
