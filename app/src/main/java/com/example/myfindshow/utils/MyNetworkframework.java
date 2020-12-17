@@ -21,10 +21,10 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 public class MyNetworkframework implements InewsGson {
 
-    private static MyNetworkframework myNetworkframework;
+    public static MyNetworkframework myNetworkframework;
     private final ApiSerivers apiSerivers;
 
-    public static MyNetworkframework getmyNetworkframework(){
+    public static MyNetworkframework getInstance(){
         if (myNetworkframework==null){
             synchronized (MyNetworkframework.class){
                 if (myNetworkframework==null){
