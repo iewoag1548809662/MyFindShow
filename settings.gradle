@@ -1,2 +1,3 @@
+include ':mylibrarys'
 include ':app'
 rootProject.name = "MyFindShow"

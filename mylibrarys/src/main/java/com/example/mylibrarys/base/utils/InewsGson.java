@@ -1,6 +1,6 @@
-package com.example.myfindshow.utils;
+package com.example.mylibrarys.base.utils;
 
-import com.example.myfindshow.contract.ICallBack;
+
 
 import java.util.HashMap;
 

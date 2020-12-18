@@ -1,4 +1,4 @@
-package com.example.myfindshow.base;
+package com.example.mylibrarys.base;
 
 import android.os.Bundle;
 
@@ -22,5 +22,14 @@ public abstract class BaseActivity<T extends BasePrenter> extends AppCompatActiv
     protected abstract void initDatas();
     protected abstract void initView();
     protected abstract int getView();
-    protected abstract T getPrenter();;
+    protected abstract T getPrenter();
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (Iprenter!=null){
+            Iprenter.detachView();
+        }
+    }
 }

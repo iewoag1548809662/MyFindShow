@@ -1,4 +1,4 @@
-package com.example.myfindshow.contract;
+package com.example.mylibrarys.base.utils;
 
 public interface ICallBack<D> {
     void getSuccess(D d);

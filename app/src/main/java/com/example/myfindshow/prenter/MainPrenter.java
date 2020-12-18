@@ -1,22 +1,21 @@
 package com.example.myfindshow.prenter;
 
-import com.example.myfindshow.base.BasePrenter;
+
 import com.example.myfindshow.bean.NewsBaen;
-import com.example.myfindshow.contract.ICallBack;
+
 import com.example.myfindshow.contract.IMyMain;
 import com.example.myfindshow.model.MainModel;
-import com.example.myfindshow.utils.MyUel;
+import com.example.mylibrarys.base.BasePrenter;
+import com.example.mylibrarys.base.utils.ICallBack;
+import com.example.mylibrarys.base.utils.MyUel;
 
-public class MainPrenter extends BasePrenter<IMyMain.Iview> implements IMyMain.Iprenter {
-    public IMyMain.Imodel imodel;
+//开始操作111
 
-    public MainPrenter() {
-        this.imodel = new MainModel();
-    }
+public class MainPrenter extends BasePrenter<IMyMain.Iview,IMyMain.Imodel> implements IMyMain.Iprenter {
 
     @Override
     public void getNews() {
-        imodel.getNews(MyUel.NEWL_URL, new ICallBack<NewsBaen>() {
+        IModel.getNews(MyUel.NEWL_URL, new ICallBack<NewsBaen>() {
             @Override
             public void getSuccess(NewsBaen newsBaen) {
                 Iview.getNews(newsBaen);
@@ -27,5 +26,10 @@ public class MainPrenter extends BasePrenter<IMyMain.Iview> implements IMyMain.I
 
             }
         });
+    }
+
+    @Override
+    protected IMyMain.Imodel getIModel() {
+        return new MainModel();
     }
 }

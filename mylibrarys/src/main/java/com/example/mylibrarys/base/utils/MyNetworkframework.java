@@ -1,7 +1,6 @@
-package com.example.myfindshow.utils;
+package com.example.mylibrarys.base.utils;
 
-import com.example.myfindshow.api.ApiSerivers;
-import com.example.myfindshow.contract.ICallBack;
+
 import com.google.gson.Gson;
 
 import java.io.IOException;

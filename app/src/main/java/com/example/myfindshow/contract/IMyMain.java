@@ -1,12 +1,14 @@
 package com.example.myfindshow.contract;
 
-import com.example.myfindshow.base.BaseView;
 import com.example.myfindshow.bean.NewsBaen;
+import com.example.mylibrarys.base.BaseModel;
+import com.example.mylibrarys.base.BaseView;
+import com.example.mylibrarys.base.utils.ICallBack;
 
 public interface IMyMain {
 
-    interface Imodel{
-        <T> void getNews(String url, ICallBack<T> callBack);
+    interface Imodel extends BaseModel {
+        <T> void getNews (String url, ICallBack<T> callBack);
     }
     interface Iprenter{
         void getNews();

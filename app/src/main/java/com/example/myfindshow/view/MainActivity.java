@@ -1,16 +1,11 @@
 package com.example.myfindshow.view;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
-
 import com.example.myfindshow.R;
-import com.example.myfindshow.base.BaseActivity;
+
 import com.example.myfindshow.bean.NewsBaen;
 import com.example.myfindshow.contract.IMyMain;
 import com.example.myfindshow.prenter.MainPrenter;
+import com.example.mylibrarys.base.BaseActivity;
 
 import java.util.List;
 
